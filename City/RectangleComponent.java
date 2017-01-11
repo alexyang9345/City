@@ -1,6 +1,8 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.Color;
+import java.util.*;
 import javax.swing.JComponent;
 
 /*
@@ -57,7 +59,9 @@ public class RectangleComponent extends JComponent
        
        //for (int i = 50; i < 200; i += 10)
        //{
+           //change to color of the box
            box.translate(10,10);
+           g2.setColor(Color.BLUE);
            // request that the Java Runtime repaints this component by invoking its paintComponent
            // do not explicitly invoke the paintComponent method
            repaint();
