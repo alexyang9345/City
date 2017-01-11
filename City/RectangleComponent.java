@@ -20,6 +20,18 @@ public class RectangleComponent extends JComponent
        
        
    }
+   
+   public RectangleComponent(int x, int y, int w, int h)
+   {
+       this.x = x;
+       this.y = y;
+       this.w = w;
+       this.h = h;
+       box = new Rectangle(x, y, w, h);
+       
+       
+   }
+   
    public void paintComponent(Graphics g)
    {  
       // Recover Graphics2D
@@ -31,7 +43,7 @@ public class RectangleComponent extends JComponent
       g2.draw(box);
 
       // Move rectangle 15 units to the right and 25 units down
-      // box.translate(15, 25);
+      box.translate(x + 15, y + 25);
 
       // Draw moved rectangle
       g2.draw(box);
@@ -40,6 +52,15 @@ public class RectangleComponent extends JComponent
    }
    public void nextFrame()
    {
+       // update the objects in the cityscape so they are animated
+       // ...
+       
+       //for (int i = 50; i < 200; i += 10)
+       //{
+           box.translate(10,10);
+           // request that the Java Runtime repaints this component by invoking its paintComponent
+           // do not explicitly invoke the paintComponent method
+           repaint();
        
    }
 }

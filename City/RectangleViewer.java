@@ -17,5 +17,25 @@ public class RectangleViewer
       
       RectangleComponent component2 = new RectangleComponent(50,50,50,30);
       frame.add(component2);
+      
+      frame.setVisible(true);
+      
+      
+      FaceComponent component3 = new FaceComponent();
+      frame.add(component3);
+      
+      frame.setVisible(true);
+      
+      
+      
+      //animate the cityscape
+      /*for (int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds++)
+       * {
+       *     component.nextFrame();
+       *     Thread.sleep(100);
+       *     
+         }*/
+       
+         
    }
 }
